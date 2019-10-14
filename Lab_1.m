@@ -51,6 +51,8 @@ x3 = linspace(-70,200,10000);
 gaus = makedist("Normal",'mu',70,'sigma',20); 
 plot(x3,pdf(gaus,x3),"LineWidth",3);
 set(gca,'YScale','log')
+cdf(0.99);
+norminv(0.99);
 
 
 %4
@@ -64,6 +66,8 @@ x4 = linspace(0,140000,1000000);
 gaus = makedist("Normal",'mu',70000,'sigma',20000); 
 plot(x4,pdf(gaus,x4),"LineWidth",3);
 set(gca,'YScale','log')
+cdf(0.95);
+norminv(0.95);
 
 %all the pattern of my hypothesis measurements are normal distribution.
 %They are pretty much symmertic of the mean and the probability depends on
