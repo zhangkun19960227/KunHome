@@ -32,6 +32,8 @@ set(gca,'YScale','log')
 %3
 %The mean is 7 and the variance of it is [0,13]. 
 
+%% Variance is wrong.
+
 
 %4
 %The graph of average of 10 dices is a non-symmetric graph and it is
@@ -47,3 +49,5 @@ set(gca,'YScale','log')
 %distributions up and get another graph. The numbers of y-axis may change
 %but it is still a gaussian distribution graph and the mean will not change
 %also. Same with the average one. 
+
+%%% Need to show.
