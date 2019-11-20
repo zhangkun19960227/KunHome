@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,IE=9,chrome=1"><meta name="generator" content="MATLAB R2019b"><title>Untitled</title><style type="text/css">.rtcContent { padding: 30px; } .CodeBlock { background-color: #F7F7F7; margin: 10px 0 10px 0;}
+.S0 { border-left: 1px solid rgb(233, 233, 233); border-right: 1px solid rgb(233, 233, 233); border-top: 1px solid rgb(233, 233, 233); border-bottom: 0px none rgb(0, 0, 0); border-radius: 4px 4px 0px 0px; padding: 6px 45px 0px 13px; line-height: 16.996px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }
+.S1 { border-left: 1px solid rgb(233, 233, 233); border-right: 1px solid rgb(233, 233, 233); border-top: 0px none rgb(0, 0, 0); border-bottom: 0px none rgb(0, 0, 0); border-radius: 0px; padding: 0px 45px 0px 13px; line-height: 16.996px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }
+.S2 { border-left: 1px solid rgb(233, 233, 233); border-right: 1px solid rgb(233, 233, 233); border-top: 0px none rgb(0, 0, 0); border-bottom: 1px solid rgb(233, 233, 233); border-radius: 0px; padding: 0px 45px 4px 13px; line-height: 16.996px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }
+.S3 { color: rgb(64, 64, 64); padding: 10px 0px 6px 17px; background: rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box; font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px; overflow-x: hidden; line-height: 16.996px;  }
+.embeddedOutputsErrorElement {min-height: 18px; max-height: 250px; overflow: auto;}
+.embeddedOutputsErrorElement.inlineElement {}
+.embeddedOutputsErrorElement.rightPaneElement {}
+.embeddedOutputsWarningElement{min-height: 18px; max-height: 250px; overflow: auto;}
+.embeddedOutputsWarningElement.inlineElement {}
+.embeddedOutputsWarningElement.rightPaneElement {}
+.diagnosticMessage-wrapper {font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 12px;}
+.diagnosticMessage-wrapper.diagnosticMessage-warningType {color: rgb(255,100,0);}
+.diagnosticMessage-wrapper.diagnosticMessage-warningType a {color: rgb(255,100,0); text-decoration: underline;}
+.diagnosticMessage-wrapper.diagnosticMessage-errorType {color: rgb(230,0,0);}
+.diagnosticMessage-wrapper.diagnosticMessage-errorType a {color: rgb(230,0,0); text-decoration: underline;}
+.diagnosticMessage-wrapper .diagnosticMessage-messagePart,.diagnosticMessage-wrapper .diagnosticMessage-causePart {white-space: pre-wrap;}
+.diagnosticMessage-wrapper .diagnosticMessage-stackPart {white-space: pre;}
+.embeddedOutputsTextElement,.embeddedOutputsVariableStringElement {white-space: pre; word-wrap: initial; min-height: 18px; max-height: 250px; overflow: auto;}
+.textElement,.rtcDataTipElement .textElement {padding-top: 3px;}
+.embeddedOutputsTextElement.inlineElement,.embeddedOutputsVariableStringElement.inlineElement {}
+.inlineElement .textElement {}
+.embeddedOutputsTextElement.rightPaneElement,.embeddedOutputsVariableStringElement.rightPaneElement {min-height: 16px;}
+.rightPaneElement .textElement {padding-top: 2px; padding-left: 9px;}
+.S4 { border-left: 1px solid rgb(233, 233, 233); border-right: 1px solid rgb(233, 233, 233); border-top: 1px solid rgb(233, 233, 233); border-bottom: 0px none rgb(0, 0, 0); border-radius: 0px; padding: 6px 45px 0px 13px; line-height: 16.996px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }
+.S5 { border-left: 1px solid rgb(233, 233, 233); border-right: 1px solid rgb(233, 233, 233); border-top: 0px none rgb(0, 0, 0); border-bottom: 1px solid rgb(233, 233, 233); border-radius: 0px 0px 4px 4px; padding: 0px 45px 4px 13px; line-height: 16.996px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }</style></head><body><div class = rtcContent><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S0'><span style="white-space: pre;"><span> </span><span style="color: rgb(60, 118, 61);">% PHYS 434 LAB 4</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(60, 118, 61);">% Kun Zhang</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span style="color: rgb(60, 118, 61);"> %% Problem 1</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'></div></div><div class="inlineWrapper outputs"><div  class = 'S2'><span style="white-space: pre;"><span> h5disp(</span><span style="color: rgb(160, 32, 240);">"gammaray_lab4.h5"</span><span>,</span><span style="color: rgb(160, 32, 240);">"Lab 4"</span><span>)</span></span></div><div  class = 'S3'><div class="inlineElement eoOutputWrapper embeddedOutputsErrorElement" uid="1486B062" data-scroll-top="null" data-scroll-left="null" data-width="846" data-height="30" data-hashorizontaloverflow="false" data-testid="output_0" style="max-height: 261px; width: 876px;"><div class="diagnosticMessage-wrapper diagnosticMessage-errorType"><div class="diagnosticMessage-messagePart">Error using h5disp (line 85)<br>LOCATION should be specified as a full pathname with a leading '/'.</div><div class="diagnosticMessage-stackPart"></div></div></div></div></div><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre;"><span> gammarayData = h5read(</span><span style="color: rgb(160, 32, 240);">"Lab 4/gammaray_lab4.h5"</span><span>,</span><span style="color: rgb(160, 32, 240);">'/data'</span><span>);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> gammarayData(1,:)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(60, 118, 61);">% Plot</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> phase = gammarayData(1:1500000,2);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> plot(phase,</span><span style="color: rgb(160, 32, 240);">"Green"</span><span>)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> hold </span><span style="color: rgb(160, 32, 240);">on</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> longitude = gammarayData(1:1500000,3);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> plot(longitude,</span><span style="color: rgb(160, 32, 240);">"Red"</span><span>) </span><span style="color: rgb(60, 118, 61);">% Earth longitude plot</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> ylim([0,400]);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> legend(</span><span style="color: rgb(160, 32, 240);">'Solar Phase(in degrees)'</span><span>,</span><span style="color: rgb(160, 32, 240);">'Earth Longitude (in degrees)'</span><span>)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> hold </span><span style="color: rgb(160, 32, 240);">off</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> number_of_Particles = gammarayData(1:1500000,4);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> plot(number_of_Particles);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(60, 118, 61);">%observations.</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(60, 118, 61);">% when the solar phase and Earth longitude overlap, the</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(60, 118, 61);">% particle counts are higher than usual. </span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(60, 118, 61);">% This means that we need to compare background when pahse and longitude overlap and also</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(60, 118, 61);">% when they don't overlap for us to be able to build a background.</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(60, 118, 61);">% The satellite takes reading every 100 milliseconds for making it</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(60, 118, 61);">% 54000 readings per orbit.</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> number_of_ParticleHist = gammarayData(1:54000,4);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> subplot(1,2,1);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> histogram(number_of_ParticleHist,</span><span style="color: rgb(160, 32, 240);">'DisplayStyle'</span><span>,</span><span style="color: rgb(160, 32, 240);">'Stairs'</span><span>,</span><span style="color: rgb(160, 32, 240);">'LineWidth'</span><span>,2.5)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> hold </span><span style="color: rgb(160, 32, 240);">on</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> number_of_ParticleHist1 = gammarayData(54001:108000,4).';</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> histogram(number_of_ParticleHist1,</span><span style="color: rgb(160, 32, 240);">'DisplayStyle'</span><span>,</span><span style="color: rgb(160, 32, 240);">'Stairs'</span><span>,</span><span style="color: rgb(160, 32, 240);">'LineWidth'</span><span>,2.5)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> number_of_ParticleHist2 = gammarayData(108001:162000,4).';</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> histogram(number_of_ParticleHist2,</span><span style="color: rgb(160, 32, 240);">'DisplayStyle'</span><span>,</span><span style="color: rgb(160, 32, 240);">'Stairs'</span><span>,</span><span style="color: rgb(160, 32, 240);">'LineWidth'</span><span>,2.5)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> xlabel(</span><span style="color: rgb(160, 32, 240);">'Number of Particles detected per orbit'</span><span>)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> ylabel(</span><span style="color: rgb(160, 32, 240);">'Measurements'</span><span>)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> hold </span><span style="color: rgb(160, 32, 240);">off</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> subplot(1,2,2);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> histogram(number_of_ParticleHist,</span><span style="color: rgb(160, 32, 240);">'DisplayStyle'</span><span>,</span><span style="color: rgb(160, 32, 240);">'Stairs'</span><span>,</span><span style="color: rgb(160, 32, 240);">'LineWidth'</span><span>,2.5)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> hold </span><span style="color: rgb(160, 32, 240);">on</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> histogram(number_of_ParticleHist1,</span><span style="color: rgb(160, 32, 240);">'DisplayStyle'</span><span>,</span><span style="color: rgb(160, 32, 240);">'Stairs'</span><span>,</span><span style="color: rgb(160, 32, 240);">'LineWidth'</span><span>,2.5)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> histogram(number_of_ParticleHist2,</span><span style="color: rgb(160, 32, 240);">'DisplayStyle'</span><span>,</span><span style="color: rgb(160, 32, 240);">'Stairs'</span><span>,</span><span style="color: rgb(160, 32, 240);">'LineWidth'</span><span>,2.5)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> set(gca,</span><span style="color: rgb(160, 32, 240);">'YScale'</span><span>,</span><span style="color: rgb(160, 32, 240);">'log'</span><span>)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> xlabel(</span><span style="color: rgb(160, 32, 240);">'(Log scale)'</span><span>)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> legend(</span><span style="color: rgb(160, 32, 240);">'first orbit'</span><span>,</span><span style="color: rgb(160, 32, 240);">'second orbit'</span><span>,</span><span style="color: rgb(160, 32, 240);">'third orbit'</span><span>)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> hold </span><span style="color: rgb(160, 32, 240);">off</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(60, 118, 61);">% it cab be deduced that background distribution follows Poisson distribution</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(60, 118, 61);">% because of shape of the histogram.</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> x1 = 0:25;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> gammaRay = makedist(</span><span style="color: rgb(160, 32, 240);">"Poisson"</span><span>,</span><span style="color: rgb(160, 32, 240);">"lambda"</span><span>,6);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> plot(x1,pdf(gammaRay,x1))</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(60, 118, 61);">% Threshold(The maximum number of particles detected).</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span></span></div></div><div class="inlineWrapper"><div  class = 'S5'><span style="white-space: pre;"><span> </span></span></div></div></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S0'><span style="white-space: pre;"><span style="color: rgb(60, 118, 61);"> %% Problem 2</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> h5disp(</span><span style="color: rgb(160, 32, 240);">"images.h5"</span><span>,</span><span style="color: rgb(160, 32, 240);">"Lab 4"</span><span>)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> image1 = h5read(</span><span style="color: rgb(160, 32, 240);">"Lab/images.h5"</span><span>,</span><span style="color: rgb(160, 32, 240);">'/image1'</span><span>);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> imagestack = h5read(</span><span style="color: rgb(160, 32, 240);">"LAB/images.h5"</span><span>,</span><span style="color: rgb(160, 32, 240);">'/imagestack'</span><span>);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> figure</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> imagesc(image1)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(60, 118, 61);">% We can get rid of  values that are negative or close to zero by getting values from 6 (least bright) to 30 (most bright)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(60, 118, 61);">% can get rid of the values that has negative or close to zero. </span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(60, 118, 61);">% The background is not time dependent. </span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> faintStar = image1(6&lt;image1 &amp; image1&lt;30); </span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> imagestack1 = imagestack(1,:,:);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> image1mat = zeros(200:200);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(0, 0, 255);">for </span><span>i = 1:200</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>     row = imagestack1(:,:,i);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>     image1mat(i,:) = row;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(0, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> figure</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> imagesc(image1mat)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> faintStar1 = image1mat(6&lt;image1mat &amp; image1mat&lt;30);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> imagestack2 = imagestack(2,:,:);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> image2mat = zeros(200:200);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(0, 0, 255);">for </span><span>i = 1:200</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>     row = imagestack2(:,:,i);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>     image2mat(i,:) = row;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(0, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> figure</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> imagesc(image2mat)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> faintStar2 = image2mat(6&lt;image2mat &amp; image2mat&lt;30);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> imagestack3 = imagestack(3,:,:);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> image3mat = zeros(200:200);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(0, 0, 255);">for </span><span>i = 1:200</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>     row = imagestack3(:,:,i);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>     image3mat(i,:) = row;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(0, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> figure</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> imagesc(image3mat)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> faintStar3 = image3mat(6&lt;image3mat &amp; image3mat&lt;30);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> imagestack4 = imagestack(4,:,:);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> image4mat = zeros(200:200);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(0, 0, 255);">for </span><span>i = 1:200</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>     row = imagestack4(:,:,i);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>     image4mat(i,:) = row;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(0, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> figure</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> imagesc(image4mat)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> faintStar4 = image4mat(6&lt;image4mat &amp; image4mat&lt;30);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> imagestack5 = imagestack(5,:,:);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> image5mat = zeros(200:200);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(0, 0, 255);">for </span><span>i = 1:200</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>     row = imagestack5(:,:,i);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>     image5mat(i,:) = row;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(0, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> figure</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> imagesc(image5mat)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> faintStar5 = image5mat(6&lt;image5mat &amp; image5mat&lt;30);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> imagestack6 = imagestack(6,:,:);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> image6mat = zeros(200:200);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(0, 0, 255);">for </span><span>i = 1:200</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>     row = imagestack6(:,:,i);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>     image6mat(i,:) = row;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(0, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> figure</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> imagesc(image6mat)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> faintStar6 = image6mat(6&lt;image6mat &amp; image6mat&lt;30);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> imagestack7 = imagestack(7,:,:);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> image7mat = zeros(200:200);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(0, 0, 255);">for </span><span>i = 1:200</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>     row = imagestack7(:,:,i);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>     image7mat(i,:) = row;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(0, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> figure</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> imagesc(image7mat)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> faintStar7 = image7mat(6&lt;image7mat &amp; image7mat&lt;30);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> imagestack8 = imagestack(8,:,:);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> image8mat = zeros(200:200);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(0, 0, 255);">for </span><span>i = 1:200</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>     row = imagestack8(:,:,i);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>     image8mat(i,:) = row;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(0, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> figure</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> imagesc(image8mat)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> faintStar8 = image8mat(6&lt;image8mat &amp; image8mat&lt;30);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> imagestack9 = imagestack(9,:,:);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> image9mat = zeros(200:200);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(0, 0, 255);">for </span><span>i = 1:200</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>     row = imagestack9(:,:,i);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>     image9mat(i,:) = row;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(0, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> figure</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> imagesc(image9mat)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> faintStar9 = image9mat(6&lt;image9mat &amp; image9mat&lt;30);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> imagestack10 = imagestack(10,:,:);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> image10mat = zeros(200:200);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(0, 0, 255);">for </span><span>i = 1:200</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>     row = imagestack10(:,:,i);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>     image10mat(i,:) = row;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(0, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> figure</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> imagesc(image10mat)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> faintStar10 = image10mat(6&lt;image10mat &amp; image10mat&lt;30);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> faintStarCombined = [faintStar1.', faintStar2.', faintStar3.', faintStar4.', faintStar5.', faintStar6.', faintStar7.', faintStar8.', faintStar9.', faintStar10.'];</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> histogram(faintStarCombined,</span><span style="color: rgb(160, 32, 240);">"DisplayStyle"</span><span>,</span><span style="color: rgb(160, 32, 240);">"Stairs"</span><span>,</span><span style="color: rgb(160, 32, 240);">"LineWidth"</span><span>,2.5)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(60, 118, 61);">% The background follows Poisson distribution,</span></span></div></div><div class="inlineWrapper"><div  class = 'S5'><span style="white-space: pre;"><span> </span></span></div></div></div></div>
+<br>
+<!-- 
+##### SOURCE BEGIN #####
+ % PHYS 434 LAB 4
+ % Kun Zhang
+ %% Problem 1
+
+ h5disp("gammaray_lab4.h5","Lab 4")
+ gammarayData = h5read("Lab 4/gammaray_lab4.h5",'/data');
+ gammarayData(1,:)
+ % Plot
+ phase = gammarayData(1:1500000,2);
+ plot(phase,"Green")
+ hold on
+ longitude = gammarayData(1:1500000,3);
+ plot(longitude,"Red") % Earth longitude plot
+ ylim([0,400]);
+ legend('Solar Phase(in degrees)','Earth Longitude (in degrees)')
+ hold off
+ number_of_Particles = gammarayData(1:1500000,4);
+ plot(number_of_Particles);
+ %observations.
+ % when the solar phase and Earth longitude overlap, the
+ % particle counts are higher than usual. 
+ % This means that we need to compare background when pahse and longitude overlap and also
+ % when they don't overlap for us to be able to build a background.
+
+ % The satellite takes reading every 100 milliseconds for making it
+ % 54000 readings per orbit.
+ number_of_ParticleHist = gammarayData(1:54000,4);
+ subplot(1,2,1);
+ histogram(number_of_ParticleHist,'DisplayStyle','Stairs','LineWidth',2.5)
+ hold on
+ number_of_ParticleHist1 = gammarayData(54001:108000,4).';
+ histogram(number_of_ParticleHist1,'DisplayStyle','Stairs','LineWidth',2.5)
+ number_of_ParticleHist2 = gammarayData(108001:162000,4).';
+ histogram(number_of_ParticleHist2,'DisplayStyle','Stairs','LineWidth',2.5)
+ xlabel('Number of Particles detected per orbit')
+ ylabel('Measurements')
+ hold off
+ subplot(1,2,2);
+ histogram(number_of_ParticleHist,'DisplayStyle','Stairs','LineWidth',2.5)
+ hold on
+ histogram(number_of_ParticleHist1,'DisplayStyle','Stairs','LineWidth',2.5)
+ histogram(number_of_ParticleHist2,'DisplayStyle','Stairs','LineWidth',2.5)
+ set(gca,'YScale','log')
+ xlabel('(Log scale)')
+ legend('first orbit','second orbit','third orbit')
+ hold off
+ % it cab be deduced that background distribution follows Poisson distribution
+ % because of shape of the histogram.
+ x1 = 0:25;
+ gammaRay = makedist("Poisson","lambda",6);
+ plot(x1,pdf(gammaRay,x1))
+ % Threshold(The maximum number of particles detected).
+ 
+ 
+%%
+ %% Problem 2
+
+ h5disp("images.h5","Lab 4")
+ image1 = h5read("Lab/images.h5",'/image1');
+ imagestack = h5read("LAB/images.h5",'/imagestack');
+ figure
+ imagesc(image1)
+ % We can get rid of  values that are negative or close to zero by getting values from 6 (least bright) to 30 (most bright)
+ % can get rid of the values that has negative or close to zero. 
+ % The background is not time dependent. 
+ faintStar = image1(6<image1 & image1<30); 
+ imagestack1 = imagestack(1,:,:);
+ image1mat = zeros(200:200);
+ for i = 1:200
+     row = imagestack1(:,:,i);
+     image1mat(i,:) = row;
+ end
+ figure
+ imagesc(image1mat)
+ faintStar1 = image1mat(6<image1mat & image1mat<30);
+
+ imagestack2 = imagestack(2,:,:);
+ image2mat = zeros(200:200);
+ for i = 1:200
+     row = imagestack2(:,:,i);
+     image2mat(i,:) = row;
+ end
+ figure
+ imagesc(image2mat)
+ faintStar2 = image2mat(6<image2mat & image2mat<30);
+
+ imagestack3 = imagestack(3,:,:);
+ image3mat = zeros(200:200);
+ for i = 1:200
+     row = imagestack3(:,:,i);
+     image3mat(i,:) = row;
+ end
+ figure
+ imagesc(image3mat)
+ faintStar3 = image3mat(6<image3mat & image3mat<30);
+
+ imagestack4 = imagestack(4,:,:);
+ image4mat = zeros(200:200);
+ for i = 1:200
+     row = imagestack4(:,:,i);
+     image4mat(i,:) = row;
+ end
+ figure
+ imagesc(image4mat)
+ faintStar4 = image4mat(6<image4mat & image4mat<30);
+
+ imagestack5 = imagestack(5,:,:);
+ image5mat = zeros(200:200);
+ for i = 1:200
+     row = imagestack5(:,:,i);
+     image5mat(i,:) = row;
+ end
+ figure
+ imagesc(image5mat)
+ faintStar5 = image5mat(6<image5mat & image5mat<30);
+
+ imagestack6 = imagestack(6,:,:);
+ image6mat = zeros(200:200);
+ for i = 1:200
+     row = imagestack6(:,:,i);
+     image6mat(i,:) = row;
+ end
+ figure
+ imagesc(image6mat)
+ faintStar6 = image6mat(6<image6mat & image6mat<30);
+
+ imagestack7 = imagestack(7,:,:);
+ image7mat = zeros(200:200);
+ for i = 1:200
+     row = imagestack7(:,:,i);
+     image7mat(i,:) = row;
+ end
+ figure
+ imagesc(image7mat)
+ faintStar7 = image7mat(6<image7mat & image7mat<30);
+
+ imagestack8 = imagestack(8,:,:);
+ image8mat = zeros(200:200);
+ for i = 1:200
+     row = imagestack8(:,:,i);
+     image8mat(i,:) = row;
+ end
+ figure
+ imagesc(image8mat)
+ faintStar8 = image8mat(6<image8mat & image8mat<30);
+
+ imagestack9 = imagestack(9,:,:);
+ image9mat = zeros(200:200);
+ for i = 1:200
+     row = imagestack9(:,:,i);
+     image9mat(i,:) = row;
+ end
+ figure
+ imagesc(image9mat)
+ faintStar9 = image9mat(6<image9mat & image9mat<30);
+
+ imagestack10 = imagestack(10,:,:);
+ image10mat = zeros(200:200);
+ for i = 1:200
+     row = imagestack10(:,:,i);
+     image10mat(i,:) = row;
+ end
+ figure
+ imagesc(image10mat)
+ faintStar10 = image10mat(6<image10mat & image10mat<30);
+
+ faintStarCombined = [faintStar1.', faintStar2.', faintStar3.', faintStar4.', faintStar5.', faintStar6.', faintStar7.', faintStar8.', faintStar9.', faintStar10.'];
+ histogram(faintStarCombined,"DisplayStyle","Stairs","LineWidth",2.5)
+ % The background follows Poisson distribution,
+##### SOURCE END #####
+--></body></html>

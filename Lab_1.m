@@ -91,7 +91,7 @@ stairs(x5,pdf(bin,x5),"LineWidth",3);
 %The plot be in x = 1 is much higher than x = 0, so it is not a symmetric
 %pattern so it is discrete.
 
-
+%Please check the commit information.
              
                 
 
