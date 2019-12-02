@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,IE=9,chrome=1"><meta name="generator" content="MATLAB R2019b"><title>Untitled</title><style type="text/css">.rtcContent { padding: 30px; } .CodeBlock { background-color: #F7F7F7; margin: 10px 0 10px 0;}
+.S0 { border-left: 1px solid rgb(233, 233, 233); border-right: 1px solid rgb(233, 233, 233); border-top: 1px solid rgb(233, 233, 233); border-bottom: 0px none rgb(0, 0, 0); border-radius: 4px 4px 0px 0px; padding: 6px 45px 0px 13px; line-height: 16.996px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }
+.S1 { border-left: 1px solid rgb(233, 233, 233); border-right: 1px solid rgb(233, 233, 233); border-top: 0px none rgb(0, 0, 0); border-bottom: 0px none rgb(0, 0, 0); border-radius: 0px; padding: 0px 45px 0px 13px; line-height: 16.996px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }
+.S2 { border-left: 1px solid rgb(233, 233, 233); border-right: 1px solid rgb(233, 233, 233); border-top: 0px none rgb(0, 0, 0); border-bottom: 1px solid rgb(233, 233, 233); border-radius: 0px 0px 4px 4px; padding: 0px 45px 4px 13px; line-height: 16.996px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }
+.S3 { margin: 20px 10px 5px 4px; padding: 0px; line-height: 20px; min-height: 0px; white-space: pre-wrap; color: rgb(60, 60, 60); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 20px; font-weight: 700; text-align: left;  }
+.S4 { margin: 2px 10px 9px 4px; padding: 0px; line-height: 21px; min-height: 0px; white-space: pre-wrap; color: rgb(0, 0, 0); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 14px; font-weight: 400; text-align: left;  }</style></head><body><div class = rtcContent><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S0'><span style="white-space: pre;"><span style="color: rgb(60, 118, 61);">% Lab 2</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span style="color: rgb(60, 118, 61);">% Physics 434</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span style="color: rgb(60, 118, 61);">% Kun Zhang</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span style="color: rgb(60, 118, 61);">% Problem 1</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span style="color: rgb(60, 118, 61);">% Background of cosmic-rays follow distribution </span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span style="color: rgb(60, 118, 61);">% In 1 day the average cosmic-rays emitted by the hypothetical</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span style="color: rgb(60, 118, 61);">% Source 4</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span style="color: rgb(60, 118, 61);">% A) Cosmic-rays</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span style="color: rgb(60, 118, 61);">% Find Background pdf</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>x0 = linspace(0, 20, 21)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>p0 = poisspdf(x0, 3); </span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>plot(x0, p0);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>num_of_days = 3;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>p = p0;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">for </span><span>i = 1:num_of_days -1</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>    p = conv(p, p0)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>x = linspace(0, 20*num_of_days, 20*num_of_days + 1)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>plot(x, p)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'></div></div><div class="inlineWrapper"><div  class = 'S1'></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span style="color: rgb(60, 118, 61);">% B) For more days</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>x0 = linspace(0, 20, 21)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>p0 = poisspdf(x0, 3); </span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>plot(x0, p0);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>num_of_days = 5;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>p = p0;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">for </span><span>i = 1:num_of_days -1</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>    p = conv(p, p0)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>x = linspace(0, 20*num_of_days, 20*num_of_days + 1)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span>plot(x, p)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'></div></div><div class="inlineWrapper"><div  class = 'S1'></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span style="color: rgb(60, 118, 61);">% C)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> x1 = linspace(0,100,101);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(60, 118, 61);">% Average 5 days</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> p5Days = poisspdf(x1, 5);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(60, 118, 61);">% Average 10 days</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> p10Days = poisspdf(x1, 10);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(60, 118, 61);">% Average 20 days</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> p30Days = poisspdf(x1, 20);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(60, 118, 61);">% Average 30 days</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> p50Days = poisspdf(x1,30);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(60, 118, 61);">% Plotting distributions</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> plot(x1,p5Days)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> plot(x1,p10Days)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> plot(x1,p20Days)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> plot(x1,p30Days)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> legend(</span><span style="color: rgb(160, 32, 240);">'5 days'</span><span>,</span><span style="color: rgb(160, 32, 240);">'10 days'</span><span>,</span><span style="color: rgb(160, 32, 240);">'20 days'</span><span>,</span><span style="color: rgb(160, 32, 240);">'30 days'</span><span>)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(60, 118, 61);">% It becomes to normal distribution as the average days increases, </span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(60, 118, 61);">% According to central limit theorem, if there is more trials</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(60, 118, 61);">% then a distribution will converge to Gaussian distribution. So, as</span></span></div></div><div class="inlineWrapper"><div  class = 'S2'><span style="white-space: pre;"><span> </span><span style="color: rgb(60, 118, 61);">% we average more days, the distribution becomes normal distribution.</span></span></div></div></div><h2  class = 'S3'><span>D) Number of days: N = 5</span></h2><div  class = 'S4'><span>Gamma rays from the source: Y*N = 4 * 5 = 20</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S0'><span style="white-space: pre;"><span> poissCosRays = makedist(</span><span style="color: rgb(160, 32, 240);">"Poisson"</span><span>,</span><span style="color: rgb(160, 32, 240);">'lambda'</span><span>,background1);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> pGammaRays = 1 - cdf(poissCosRays, 20)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> sigmaGammaRays = icdf(</span><span style="color: rgb(160, 32, 240);">'Normal'</span><span>,1-pGammaRays,0,1)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(60, 118, 61);">% Problem 2</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> x2 = linspace(0,100,101);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> expD = makedist(</span><span style="color: rgb(160, 32, 240);">"Exponential"</span><span>,</span><span style="color: rgb(160, 32, 240);">'mu'</span><span>,0);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(60, 118, 61);">% As average more intervals from 1 to 30 </span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> r1 = raylpdf(x2,1);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> r10 = raylpdf(x2,10);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> r20 = raylpdf(x2,20);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> r30 = raylpdf(x2,30);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(60, 118, 61);">% Plotting Distribution</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> plot(x2,r1,</span><span style="color: rgb(160, 32, 240);">"LineWidth"</span><span>,4)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> hold </span><span style="color: rgb(160, 32, 240);">on</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> plot(x2,r10,</span><span style="color: rgb(160, 32, 240);">"LineWidth"</span><span>,4)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> plot(x2,r20,</span><span style="color: rgb(160, 32, 240);">"LineWidth"</span><span>,4)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> plot(x2,r30,</span><span style="color: rgb(160, 32, 240);">"LineWidth"</span><span>,4)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> legend(</span><span style="color: rgb(160, 32, 240);">'1'</span><span>,</span><span style="color: rgb(160, 32, 240);">'10'</span><span>,</span><span style="color: rgb(160, 32, 240);">'20'</span><span>,</span><span style="color: rgb(160, 32, 240);">'30'</span><span>)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> hold </span><span style="color: rgb(160, 32, 240);">off</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(60, 118, 61);">% It approaches a Gaussian distribution as average more intervals</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(60, 118, 61);">% After 10 intervals</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(60, 118, 61);">% Problem 3</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(60, 118, 61);">% Version 1</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(60, 118, 61);">% A)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(60, 118, 61);">% Width: x = 10</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(60, 118, 61);">% Signal of strength: Y = 50</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(60, 118, 61);">% Mean = 0</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(60, 118, 61);">% Standard deviation = 20</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(60, 118, 61);">% What is the probability of finding a signal of strength 50 from the</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(60, 118, 61);">% background Gaussian distribution with the width of 10?</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> x3 = linspace(-50,50,100);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> normCCD = makedist(</span><span style="color: rgb(160, 32, 240);">"Normal"</span><span>,</span><span style="color: rgb(160, 32, 240);">"mu"</span><span>,0,</span><span style="color: rgb(160, 32, 240);">"sigma"</span><span>,20);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> plot(x3,pdf(normCCD,x3))</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> sigmaCCD= icdf(</span><span style="color: rgb(160, 32, 240);">'Normal'</span><span>,cdf(normCCD,50),0,1)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(60, 118, 61);">% the probability of finding a signal of strength 50 from the background </span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(60, 118, 61);">% Gaussian distribution with the width of 10 is 2 so is hard to tell the </span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(60, 118, 61);">% Discovery</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(60, 118, 61);">% Version 2</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(60, 118, 61);">% B)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(60, 118, 61);">% I'm not sure about this one but I think the probability distribution of </span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(60, 118, 61);">% The background will still be a Gaussian distribution</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(60, 118, 61);">% C)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> pixel = 10000;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> normCCD2 = pdf(normCCD1,x3)*pixel;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> plot(normCCD2)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> nCCD2 = makedist(</span><span style="color: rgb(160, 32, 240);">"Normal"</span><span>,</span><span style="color: rgb(160, 32, 240);">"mu"</span><span>,50,</span><span style="color: rgb(160, 32, 240);">"sigma"</span><span>,20);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> x4 = linspace(0,100,100);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> plot(x4,pdf(nCCD2,x4))</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> sigmaCCD2= icdf(</span><span style="color: rgb(160, 32, 240);">'Normal'</span><span>,cdf(nCCD2,50),0,1)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(60, 118, 61);">% Problem 4</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(60, 118, 61);">% A) </span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(60, 118, 61);">% What is the strength of a signal that produces 5 sigma?</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(60, 118, 61);">% sigmaV1 = norminv([0.0000003,0.9999997])</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> sigmaCCDV1 = icdf(</span><span style="color: rgb(160, 32, 240);">'Normal'</span><span>,cdf(normCCD1,100),0,1)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(60, 118, 61);">% The strength of 100 signal is required to get 5 sigma.</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(60, 118, 61);">% B)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> sigmaCCD2V1= icdf(</span><span style="color: rgb(160, 32, 240);">'Normal'</span><span>,cdf(nCCD2,200),0,1)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(60, 118, 61);">% A strength of 200 signal is required to get 5 sigma.</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(60, 118, 61);">% C) </span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> sigmaCCD3V1= ipdf(</span><span style="color: rgb(160, 32, 240);">'Normal'</span><span>,pdf(nCCD2,200),0,1)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(60, 118, 61);">% The signal must be +100 brighter to get if we have a trials factor of 10k</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(60, 118, 61);">% D)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(60, 118, 61);">% The effect on my 5-sigma sensitivity threshold will be 100 times larger</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(60, 118, 61);">% Than before</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(60, 118, 61);">% Extra Credit)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(60, 118, 61);">% Because it is not a gaussian distribution anymore so it is not symmetric</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre;"><span> </span><span style="color: rgb(60, 118, 61);">% with the mean so the sensitivity penalty of many trials will decrease</span></span></div></div><div class="inlineWrapper"><div  class = 'S2'><span style="white-space: pre;"><span> </span><span style="color: rgb(60, 118, 61);">% than the gaussian distribution</span></span></div></div></div></div>
+<br>
+<!-- 
+##### SOURCE BEGIN #####
+% Lab 2
+% Physics 434
+% Kun Zhang
+
+% Problem 1
+% Background of cosmic-rays follow distribution 
+% In 1 day the average cosmic-rays emitted by the hypothetical
+% Source 4
+
+% A) Cosmic-rays
+% Find Background pdf
+x0 = linspace(0, 20, 21)
+
+p0 = poisspdf(x0, 3); 
+plot(x0, p0);
+
+num_of_days = 3;
+p = p0;
+for i = 1:num_of_days -1
+    p = conv(p, p0)
+end
+
+x = linspace(0, 20*num_of_days, 20*num_of_days + 1)
+
+plot(x, p)
+
+
+% B) For more days
+x0 = linspace(0, 20, 21)
+
+p0 = poisspdf(x0, 3); 
+plot(x0, p0);
+
+num_of_days = 5;
+p = p0;
+for i = 1:num_of_days -1
+    p = conv(p, p0)
+end
+
+x = linspace(0, 20*num_of_days, 20*num_of_days + 1)
+
+plot(x, p)
+
+
+% C)
+ x1 = linspace(0,100,101);
+ % Average 5 days
+ p5Days = poisspdf(x1, 5);
+
+ % Average 10 days
+ p10Days = poisspdf(x1, 10);
+
+ % Average 20 days
+ p30Days = poisspdf(x1, 20);
+
+ % Average 30 days
+ p50Days = poisspdf(x1,30);
+
+ % Plotting distributions
+ plot(x1,p5Days)
+ plot(x1,p10Days)
+ plot(x1,p20Days)
+ plot(x1,p30Days)
+
+ legend('5 days','10 days','20 days','30 days')
+ % It becomes to normal distribution as the average days increases, 
+ % According to central limit theorem, if there is more trials
+ % then a distribution will converge to Gaussian distribution. So, as
+ % we average more days, the distribution becomes normal distribution.
+%% D) Number of days: N = 5
+% Gamma rays from the source: Y*N = 4 * 5 = 20
+
+ poissCosRays = makedist("Poisson",'lambda',background1);
+ pGammaRays = 1 - cdf(poissCosRays, 20)
+ sigmaGammaRays = icdf('Normal',1-pGammaRays,0,1)
+ 
+ 
+ % Problem 2
+
+ x2 = linspace(0,100,101);
+ expD = makedist("Exponential",'mu',0);
+ % As average more intervals from 1 to 30 
+ r1 = raylpdf(x2,1);
+ r10 = raylpdf(x2,10);
+ r20 = raylpdf(x2,20);
+ r30 = raylpdf(x2,30);
+
+ % Plotting Distribution
+ plot(x2,r1,"LineWidth",4)
+ hold on
+ plot(x2,r10,"LineWidth",4)
+ plot(x2,r20,"LineWidth",4)
+ plot(x2,r30,"LineWidth",4)
+
+ legend('1','10','20','30')
+ hold off
+ 
+ % It approaches a Gaussian distribution as average more intervals
+ % After 10 intervals
+ 
+ 
+ % Problem 3
+ % Version 1
+ 
+ % A)
+ % Width: x = 10
+ % Signal of strength: Y = 50
+ % Mean = 0
+ % Standard deviation = 20
+ % What is the probability of finding a signal of strength 50 from the
+ % background Gaussian distribution with the width of 10?
+ x3 = linspace(-50,50,100);
+ normCCD = makedist("Normal","mu",0,"sigma",20);
+ plot(x3,pdf(normCCD,x3))
+ sigmaCCD= icdf('Normal',cdf(normCCD,50),0,1)
+ % the probability of finding a signal of strength 50 from the background 
+ % Gaussian distribution with the width of 10 is 2 so is hard to tell the 
+ % Discovery
+ 
+ 
+ % Version 2
+ % B)
+ 
+ % I'm not sure about this one but I think the probability distribution of 
+ % The background will still be a Gaussian distribution
+ 
+ 
+ % C)
+ pixel = 10000;
+ normCCD2 = pdf(normCCD1,x3)*pixel;
+ plot(normCCD2)
+ nCCD2 = makedist("Normal","mu",50,"sigma",20);
+ x4 = linspace(0,100,100);
+ plot(x4,pdf(nCCD2,x4))
+ sigmaCCD2= icdf('Normal',cdf(nCCD2,50),0,1)
+ 
+ 
+ % Problem 4
+
+ % A) 
+ % What is the strength of a signal that produces 5 sigma?
+ % sigmaV1 = norminv([0.0000003,0.9999997])
+ sigmaCCDV1 = icdf('Normal',cdf(normCCD1,100),0,1)
+ % The strength of 100 signal is required to get 5 sigma.
+
+ % B)
+ sigmaCCD2V1= icdf('Normal',cdf(nCCD2,200),0,1)
+ % A strength of 200 signal is required to get 5 sigma.
+
+ % C) 
+ sigmaCCD3V1= ipdf('Normal',pdf(nCCD2,200),0,1)
+ % The signal must be +100 brighter to get if we have a trials factor of 10k
+ 
+ % D)
+ % The effect on my 5-sigma sensitivity threshold will be 100 times larger
+ % Than before
+ 
+ 
+ % Extra Credit)
+ % Because it is not a gaussian distribution anymore so it is not symmetric
+ % with the mean so the sensitivity penalty of many trials will decrease
+ % than the gaussian distribution
+##### SOURCE END #####
+--></body></html>
